@@ -1,0 +1,42 @@
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    > .content-container {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      align-items: center;
+      gap: 1rem;
+      width: fit-content;
+
+      > .content {
+          display: flex;
+          flex-direction: column;
+          background: hsla(var(--secondary-background-color));
+          width: 24rem;
+          height: 12rem;
+          border: 1px solid var(--accents-1);
+          border-radius: 6px;
+          padding: 1.5rem;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          text-decoration: none;
+
+          > h4 {
+            font-weight: 600;
+          }
+
+          > p {
+            margin-top: 0.5rem;
+            font-size: 14px;
+            color: hsl(0, 0%, 70%);
+          }
+      }
+      
+      .content:hover {
+          border: 1px solid #5a5a5a;
+      }
+    }
+  }

@@ -1,0 +1,101 @@
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    > .content-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: fit-content;
+
+        > .content {
+            display: flex;
+            flex-direction: column;
+            background: hsla(var(--secondary-background-color));
+            min-width: 24rem;
+            height: 12rem;
+            border: 1px solid var(--accents-1);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+
+            > .head {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+
+                > img {
+                    max-height: 2rem;
+                }
+
+                > .book {
+                    transform: scale(1.3);
+                }
+
+                > .title-container {
+
+                    .title {
+                        font-size: 1rem;
+                    }
+    
+                    .url {
+                        font-size: 0.8rem;
+                        color: var(--accents-3);
+                        margin-top: 3px;
+                    }
+                }
+
+            }
+
+            > .info {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+    
+                > .github {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5rem;
+                    background: hsl(0, 0%, 15%);
+                    width: fit-content;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 999px;
+                    margin-top: 1rem;
+                    transition: all 0.2s ease;
+    
+                    > img {
+                        max-height: 1rem;
+                    }
+
+                    > span {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                > .github:hover {
+                    background: hsl(0, 0%, 20%);
+                }
+
+                > .date {
+                    display: inline-block;
+                    font-size: 0.8rem;
+                    margin-top: auto;
+                    color: hsl(0, 0%, 50%);
+                }
+
+            }
+        }
+
+        .content:hover {
+            border: 1px solid #5a5a5a;
+        }
+         
+    }
+}
